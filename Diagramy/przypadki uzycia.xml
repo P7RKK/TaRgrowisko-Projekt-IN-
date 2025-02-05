@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="TarGrowisko Use Case Diagram">
+    <mxGraphModel dx="1242" dy="727" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Actors -->
+        <mxCell id="actor_user" value="Użytkownik" style="shape=actor;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" value="Administrator" style="shape=actor;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_app" value="Aplikacja" style="shape=rect;rounded=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="600" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Use Cases -->
+        <mxCell id="usecase_browse" value="Przeglądanie produktów" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="50" width="140" height="40" as="geometry" />
+        </mxCell>
+        <!-- Include rest of the use cases and relationships -->
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

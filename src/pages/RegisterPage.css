@@ -1,0 +1,103 @@
+/* Ogólne ustawienia strony */
+.register-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: var(--pastel-background); /* Pastelowe tło */
+  }
+  
+  .register-container {
+    background-color: #323232;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+  }
+  
+  /* Nagłówek */
+  .register-container h1 {
+    font-size: 2.2rem;
+    color: var(--pastel-primary-text); /* Pastelowy kolor nagłówka */
+    margin-bottom: 10px;
+  }
+  
+  .register-container p {
+    font-size: 1rem;
+    color: var(--pastel-secondary-text); /* Pastelowy kolor podtytułów */
+    margin-bottom: 30px;
+  }
+  
+  /* Formularz */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--pastel-primary-text);
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid var(--pastel-border);
+    border-radius: 8px;
+    background-color: var(--pastel-input-background);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--pastel-primary-text);
+    box-shadow: 0 0 5px rgba(123, 239, 178, 0.3); /* Pastelowy akcent */
+  }
+  
+  /* Przycisk */
+  .register-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--button-text);
+    background-color: var(--pastel-primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .register-button:hover {
+    background-color: var(--pastel-primary-hover);
+    transform: translateY(-2px);
+  }
+  
+  /* Informacje o rejestracji */
+  .register-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--pastel-secondary-text);
+  }
+  
+  .register-footer a {
+    color: var(--pastel-link);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-footer a:hover {
+    text-decoration: underline;
+  }
+  

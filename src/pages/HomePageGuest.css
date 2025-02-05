@@ -1,0 +1,179 @@
+.homepage-guest {
+  margin-bottom: 40px;
+}
+
+/* Gorąca Oferta */
+.hot-deal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e; /* Ciemne gradientowe tło */
+  color: white;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Głębszy cień */
+}
+
+.hot-deal-content {
+  flex: 1;
+}
+
+.hot-deal-content h1 {
+  font-size: 28px; /* Skalowalny rozmiar czcionki */
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.hot-deal-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Lepsza widoczność na ciemnym tle */
+}
+
+.hot-deal-content .cta-button {
+  padding: 10px 20px;
+  background-color: #4d2288;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animacja hover */
+}
+
+.hot-deal-content .cta-button:hover {
+  background-color: #4d2288;
+  transform: scale(1.05); /* Subtelny efekt powiększenia */
+}
+
+.hot-deal-image {
+  position: relative;
+  flex: 1;
+  text-align: right;
+}
+
+.hot-deal-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Głębszy cień obrazu */
+}
+
+.hot-deal-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff5733;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Dodanie głębi dla odznaki */
+}
+
+.hot-deal-badge i {
+  color: yellow;
+  font-size: 16px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #3a5ba0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-button:hover {
+  background-color: #507bc8;
+}
+
+
+/* Slider Section */
+.slider {
+  width: 100%; /* Slider zajmuje pełną szerokość strony */
+  background-color: #1e1e1e;
+  padding: 20px 0;
+  margin: 0 auto; /* Wyśrodkowanie */
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1200px; /* Maksymalna szerokość slidera */
+  margin: 0 auto; /* Wyśrodkowanie slidera */
+  padding: 0 20px; /* Marginesy wewnętrzne */
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  scroll-behavior: smooth;
+  padding: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.slide {
+  background-color: #1e1e1e;
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+}
+
+.slide img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover; /* Zapewnia odpowiednie dopasowanie obrazka */
+}
+
+.slide h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.slide p {
+  font-size: 14px;
+  color: var(--highlight-color);
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.slider-button.left {
+  left: -20px; /* Przesunięcie przycisku w lewo */
+}
+
+.slider-button.right {
+  right: -20px; /* Przesunięcie przycisku w prawo */
+}
+
+.slider-button:hover {
+  background-color: var(--hover-color);
+}

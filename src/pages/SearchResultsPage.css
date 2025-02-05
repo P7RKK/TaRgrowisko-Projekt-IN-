@@ -1,0 +1,179 @@
+/* Ogólny kontener strony */
+.search-results-page {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Filtry */
+/* Kontener filtrów */
+.filters {
+    width: 300px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .filters h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+
+  /* Kontener zakresu cen */
+.filters .price-range-container {
+    display: flex; /* Elementy w jednym rzędzie */
+    align-items: center; /* Wyrównanie w pionie */
+    gap: 10px; /* Odstęp między elementami */
+    margin-bottom: 15px; /* Odstęp od innych sekcji */
+  }
+  
+  /* Styl suwaka */
+  .filters .price-range-container input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60%; /* Szerokość suwaka */
+    height: 8px; /* Wysokość paska suwaka */
+    background: #4caf50; /* Kolor paska suwaka */
+    border-radius: 5px; /* Zaokrąglenie paska */
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.2s ease; /* Efekt podświetlenia */
+  }
+  
+  .filters .price-range-container input[type="range"]:hover {
+    opacity: 1; /* Podświetlenie suwaka przy najechaniu */
+  }
+  
+  .filters .price-range-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px; /* Szerokość uchwytu */
+    height: 16px; /* Wysokość uchwytu */
+    background: #ffffff; /* Kolor uchwytu */
+    border: 2px solid #4caf50; /* Obramowanie uchwytu */
+    border-radius: 50%; /* Zaokrąglenie uchwytu */
+    cursor: pointer;
+  }
+  
+  .filters .price-range-container input[type="range"]::-moz-range-thumb {
+    width: 16px; /* Szerokość uchwytu dla przeglądarki Firefox */
+    height: 16px;
+    background: #ffffff;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Styl etykiet zakresu cen */
+  .filters .price-range-values {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  
+  /* Pozostałe style filtrów */
+  .filters select,
+  .filters button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .filters button {
+    background-color: #4caf50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filters button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Wyniki */
+  .results {
+    flex: 1;
+  }
+  
+  .results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .result-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .result-thumbnail {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .result-info {
+    flex: 1;
+  }
+  
+  .result-info h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #ffffff;
+  }
+  
+  .result-info p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  /* Kategorie */
+  .result-category {
+    font-style: italic;
+    color: #999;
+    margin-top: 5px;
+  }
+  
+  /* Buttony */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .details-button,
+  .add-to-cart-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-button:hover,
+  .add-to-cart-button:hover {
+    background-color: #45a049;
+  }

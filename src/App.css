@@ -1,0 +1,144 @@
+/* Global Styles inspired by G2A.com */
+
+:root {
+  /* Color Palette */
+  --primary-color: #ffcc00; /* Yellow accent */
+  --secondary-color: #000000; /* Black */
+  --background-color: #f5f5f5; /* Light gray */
+  --text-color: #333333; /* Dark gray for text */
+  --border-color: #e0e0e0; /* Border light gray */
+
+  /* Hover and Focus */
+  --hover-color: #ffe066; /* Light yellow hover */
+  --focus-color: rgba(255, 204, 0, 0.3); /* Yellow focus outline */
+
+  /* Box Shadow */
+  --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+/* Button Styles */
+button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+/* Container and Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.navbar a {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--hover-color);
+}
+
+/* Updated Navbar for G2A-like design */
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.navbar-quote {
+  font-family: 'Style Script', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+  text-align: center;
+}
+
+
+.navbar-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-menu a {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-icons button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-icons button:hover {
+  color: var(--hover-color);
+}

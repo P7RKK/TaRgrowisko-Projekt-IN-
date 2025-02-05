@@ -1,0 +1,23 @@
+.chat-component {
+    display: flex;
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Stylizacja kontaktów */
+  .contacts-list {
+    width: 30%;
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--secondary-color);
+    overflow-y: auto;
+  }
+  
+  /* Stylizacja wiadomości */
+  .chat-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  

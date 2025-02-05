@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="TarGrowisko Use Case Diagram">
+    <mxGraphModel dx="1242" dy="727" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Actors -->
+        <mxCell id="actor_user" value="Użytkownik" style="shape=actor;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" value="Administrator" style="shape=actor;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_external" value="System Płatności" style="shape=actor;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="800" y="200" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_guest" value="Gość" style="shape=actor;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_supplier" value="Dostawca" style="shape=actor;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="800" y="500" width="40" height="60" as="geometry" />
+        </mxCell>
+        <!-- Use Cases -->
+        <mxCell id="usecase_browse" value="Przeglądanie produktów" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="50" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase_cart" value="Zarządzanie koszykiem" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase_payment" value="Dokonywanie płatności" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="250" y="350" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase_orders" value="Zarządzanie zamówieniami" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="500" y="50" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase_notifications" value="Powiadomienia" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="500" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase_recommend" value="Rekomendacje produktów" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="500" y="350" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase_auction" value="Wystawianie aukcji" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="750" y="100" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase_complaints" value="Obsługa reklamacji" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="750" y="300" width="160" height="80" as="geometry" />
+        </mxCell>
+        <!-- Relationships -->
+        <mxCell id="rel_user_browse" edge="1" parent="1" source="actor_user" target="usecase_browse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_cart" edge="1" parent="1" source="actor_user" target="usecase_cart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_payment" edge="1" parent="1" source="actor_user" target="usecase_payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_admin_orders" edge="1" parent="1" source="actor_admin" target="usecase_orders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_supplier_notifications" edge="1" parent="1" source="actor_supplier" target="usecase_notifications">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_external_payment" edge="1" parent="1" source="usecase_payment" target="actor_external">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Include Relationships -->
+        <mxCell id="rel_cart_payment" edge="1" parent="1" source="usecase_cart" target="usecase_payment" value="<<include>>">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_notifications_complaints" edge="1" parent="1" source="usecase_notifications" target="usecase_complaints" value="<<include>>">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

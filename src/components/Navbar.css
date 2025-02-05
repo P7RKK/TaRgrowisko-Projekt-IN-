@@ -1,0 +1,264 @@
+:root {
+    /* Stonowana, ciemniejsza paleta kolorów z kontrastującym akcentem */
+    --primary-color: #2d2d2d; /* Ciemny szary */
+    --secondary-color: #404040; /* Średni szary */
+    --background-color: #342e39; /* Bardzo ciemny szary */
+    --text-color: #e0e0e0; /* Jasny szary */
+    --highlight-color: #3a5ba0; /* Jaśniejszy niebieski akcent */
+    --hover-color: #507bc8; /* Jeszcze jaśniejszy niebieski dla hover */
+    --border-color: #303030; /* Bardzo ciemny szary */
+    font-family: 'Roboto', sans-serif;
+  }
+
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #342e39; /* Dostosowany kolor navbaru */
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-logo {
+    display: 82px;
+    align-items: center; /* Wyśrodkowanie logo w pionie */
+    flex-shrink: 0; /* Zapobiega zmniejszaniu się logo */
+  }
+
+  .navbar-logo-img {
+    max-height: 82px; /* Dopasowanie wysokości logo do navbaru */
+    width: flex; /* Automatyczne skalowanie szerokości */
+    
+  }
+
+  .navbar-search {
+    width: 500px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .navbar-search input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #4d2288;
+    border-radius: 8px 0 0 8px;
+    background-color: #335179;
+    color: var(--text-color);
+  }
+
+  .navQuote {
+    background-color: #342e39;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 42px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+    margin: auto;
+  }
+  
+  .navbar-search button {
+    background-color: #4d2288;
+    border: none;
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: auto;
+  }
+  
+  .navbar-link {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  
+  .navbar-link:hover {
+    color: var(--highlight-color);
+  }
+  .navbar-link span {
+    display: none; /* Ukrycie napisów przy ikonach */
+  }
+  
+  .navbar-link i {
+    font-size: 24px; /* Powiększenie ikon */
+  }
+  
+  .navbar-categories {
+    position: relative;
+  }
+  
+  .navbar-categories button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .categories-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-categories:hover .categories-dropdown {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .category {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .category h4 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--highlight-color);
+    cursor: pointer;
+  }
+  
+  .category:hover .genres {
+    display: flex;
+  }
+  
+  .genres {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .genres li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  
+  .genres li a:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .navbar-search {
+      width: 100%;
+    }
+    .categories-dropdown {
+      flex-direction: column;
+    }
+
+    .logout-button {
+      background: none;
+      border: none;
+      color: #ff4d4d;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .logout-button:hover {
+      color: #e60000;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animated-dropdown {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+ /* Lista sugestii */
+.suggestions-list {
+  position: absolute;
+  top: calc(100% + 5px); /* Rozwijana tuż pod paskiem wyszukiwania */
+  left: 0;
+  width: 100%; /* Dopasowana szerokość do paska wyszukiwania */
+  background: #335179; /* Tło w ciemnym stylu */
+  border: 1px solid white; /* Obramowanie zgodne z kolorystyką strony */
+  border-radius: 5px; /* Zaokrąglenie rogów */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtelny cień dla nowoczesnego wyglądu */
+  z-index: 1050; /* Nad stroną */
+  max-height: 300px; /* Maksymalna wysokość */
+  overflow-y: auto; /* Scrollowanie przy długich listach */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Element listy */
+.suggestion-item {
+  padding: 12px 15px; /* Większe odstępy dla lepszej czytelności */
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff; /* Jasny tekst */
+  transition: background 0.3s ease; /* Animacja na hover */
+}
+
+/* Hover na elemencie listy */
+.suggestion-item:hover {
+  background: #333; /* Subtelna zmiana tła na hover */
+}
+
+/* Link w elemencie listy */
+.suggestion-link {
+  text-decoration: none; /* Bez podkreślenia */
+  color: inherit; /* Dziedziczenie koloru tekstu */
+  display: flex;
+  justify-content: space-between; /* Rozdzielenie nazwy i platformy */
+  align-items: center;
+}
+
+/* Platforma w wynikach */
+.suggestion-platform {
+  font-size: 12px;
+  color: #bbb; /* Subtelniejszy kolor dla dodatkowych informacji */
+}

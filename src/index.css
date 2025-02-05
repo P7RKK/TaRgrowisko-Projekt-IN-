@@ -1,0 +1,76 @@
+/* Global Styles */
+.navQuote {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 36px; /* Upewnij się, że rozmiar tekstu jest odpowiedni */
+  font-weight: 400;
+  color: var(--text-color); /* Zastosuj kolor pasujący do projektu */
+  text-align: center;
+}
+
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #FFFFFF;
+  --background-color: #F9F9F9;
+  --text-color: #333333;
+  --border-color: #E0E0E0;
+  --accent-color: #FF5722;
+  --hover-color: #4CAF50CC;
+  --focus-color: rgba(76, 175, 80, 0.3);
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  box-shadow: var(--hover-shadow);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}

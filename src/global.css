@@ -1,0 +1,30 @@
+:root {
+    /* Paleta kolorów */
+    --primary-color: #2d2d2d;
+    --secondary-color: #404040;
+    --background-color: #342e39;
+    --text-color: #e0e0e0;
+    --highlight-color: #3a5ba0;
+    --hover-color: #507bc8;
+    --border-color: #303030;
+  
+    /* Typografia */
+    --font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
